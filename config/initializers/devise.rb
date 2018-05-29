@@ -282,5 +282,5 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   #
   config.mailer_sender = 'ahowardm@gmail.com'
-  config.omniauth :facebook , 443437529411175 , "37224ca9c82609b8b21d337709bb5172"
+  config.omniauth :facebook , "443437529411175" , "37224ca9c82609b8b21d337709bb5172"
 end

@@ -9,30 +9,13 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <div>
     <%= render 'layouts/header'  %>
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 
-  <!--<script>
-      window.fbAsyncInit = function() {
-          FB.init({
-              appId      : '{your-app-id}',
-              cookie     : true,
-              xfbml      : true,
-              version    : '{latest-api-version}'
-          });
-
-          FB.AppEvents.logPageView();
-
-      };
-
-      (function(d, s, id){
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) {return;}
-          js = d.createElement(s); js.id = id;
-          js.src = "https://connect.facebook.net/en_US/sdk.js";
-          fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-  </script>-->
 </html>
