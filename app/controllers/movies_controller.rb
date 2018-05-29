@@ -1,5 +1,7 @@
 class MoviesController < ApplicationController
   def index
+    @movies = Movie.all
+    @comments = Comment.all
   end
 
   def new

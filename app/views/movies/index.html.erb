@@ -1,1 +1,15 @@
-<h1>Movies index</h1>
+<h1>We have <%= pluralize @movies.count, 'movie' %></h1>
+
+
+<% @movies.each do |movie| %>
+  <div class="row">
+    <h3><%= movie.title %></h3>
+    <p><%= movie.description %></p>
+    <h4>Comments</h4>
+    <% @comments.each do |comment| %>
+      <% if (comment.movie_id == movie.id) %>
+        <p><strong><%= comment.title %></strong>: <%= comment.body %></p>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
